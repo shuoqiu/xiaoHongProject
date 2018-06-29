@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://www.baidu.com" onclick="fn();return false;">切换</a><br><br>
+<img id="img" src="image2/1.jpg" width="400px">
+<script>
+    //var a=document.getElementsByTagName("a")[0];
+    //var img=document.getElementById("img");
+    //a.onclick=function(){
+    //    img.src="image2/2.jpg";
+    //    return false;
+    //}
+    var img = document.getElementById("img");
+    function fn() {
+        img.src = "image2/2.jpg";
+    }
+</script>
+
+</body>
+</html>

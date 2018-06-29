@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button>赋诗</button>
+<script>
+
+    var btn = document.getElementsByTagName("button")[0];
+    //    btn.onclick = function () {
+    //        console.log("九尺龙泉万卷书，上天生我意何如。");
+    //        }
+    //
+    //        btn.onclick = function () {
+    //            console.log("不能报国平天下，枉为男儿大丈夫。");
+    //        }
+    btn.addEventListener("click", fn1);
+    btn.addEventListener("click", fn2);
+    function fn1() {
+        console.log("九尺龙泉万卷书，上天生我意何如。");
+    }
+    function fn2() {
+        console.log("不能报国平天下，枉为男儿大丈夫。");
+    }
+
+
+</script>
+</body>
+</html>

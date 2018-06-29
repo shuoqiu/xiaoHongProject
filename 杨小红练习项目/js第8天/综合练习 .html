@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //
+    <!--1 ["c","a","z","a","x","a"]找出数组中每一个元素出现的次数。-->
+    //var arr=["c","a","z","a","x","a"];
+    //var json={};
+    //for(i=0;i<arr.length;i++){
+    //    if(json[arr[i]]){
+    //        json[arr[i]]+=1;
+    //    }else{
+    //        json[arr[i]]=1;
+    //    }
+    //    console.log(json);
+    //}
+    //
+    <!--2 编写方法，去掉一个数组中的重复元素。-->
+    //var arr = [1,2,3,4,5,2,3,4];
+    //var aaa=fn(arr);
+    //console.log(aaa);
+    //function fn(array){
+    //    var newArr=[];
+    //    for(var i=0;i<arr.length;i++){
+    //        var bool=true;
+    //        for(var j=0;j<newArr.length;j++){
+    //            if(array[i]==newArr[j]) {
+    //                bool = false;
+    //            }
+    //        }
+    //        if(bool){
+    //            newArr[newArr.length]=array[i];
+    //        }
+    //
+    //    }
+    //    return newArr;
+    //}
+    //    将一个字符串数组输出为|分割的形式，比如“刘备|张飞|关羽”。使用两种方式实现
+    //    var arr = ["刘备","张飞","关羽"];
+    //    var str = arr[0];
+    //    var separator = "|";
+    //    for(var i=1;i<arr.length;i++){
+    //        str+=separator+arr[i];
+    //    }
+    //    console.log(arr.join("|"));
+
+    //    将一个字符串数组的元素的顺序进行反转。["a","b","c","d"] ["d","c","b","a"]。使用两种种方式实现。提示：第i个和第length-i-1个进行交换
+    //    var arr1 = [1,2,3];
+    //    console.log(arr1.reverse());
+
+    ////第一种
+    //    function reverse1(array){
+    //        var newArr = [];
+    //        for(var i=array.length-1;i>=0;i--){
+    //            newArr[newArr.length] = array[i];
+    //        }
+    //        return newArr;
+    //    }
+    ////第二种
+    //    function reverse2(array){
+    //        for(var i=0;i<array.length/2;i++){
+    //            var temp = array[i];
+    //            array[i] = array[array.length-1-i];
+    //            array[array.length-1-i] = temp;
+    //        }
+    //        return array;
+    //    }
+
+    //    工资的数组[1500,1200,2000,2100,1800],把工资超过2000的删除
+    var arr3 = [1500, 1200, 2000, 2100, 1800];
+    var arr = arr3.filter(function (ele, index, arr) {
+        if (ele > 2000) {
+            return false;
+        }
+        return true;
+    })
+    console.log(arr);
+
+</script>
+</body>
+</html>

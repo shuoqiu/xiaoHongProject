@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 1210px;
+            margin: 200px auto;
+            color: red;
+            text-aign: center;
+            font: 600 30px/30px "simsun";
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    var timer = setInterval(fn, 1);
+    function fn() {
+        var nowTime = new Date();
+        var futureTime = new Date("2017/09/30 18:23:15");
+        var timeSum = futureTime.getTime() - nowTime.getTime();
+        var day = parseInt(timeSum / 1000 / 60 / 60 / 24);
+        var hour = parseInt(timeSum / 1000 / 60 / 60 % 24);
+        var minute = parseInt(timeSum / 1000 / 60 % 60);
+        var second = parseInt(timeSum / 1000 % 60);
+        var millSecond = parseInt(timeSum % 1000);
+        day = day < 10 ? "0" + day : day;
+        hour = hour < 10 ? "0" + hour : hour;
+        minute = minute < 10 ? "0" + minute : minute;
+        second = second < 10 ? "0" + second : second;
+        if (millSecond < 10) {
+            millSecond = "00" + millSecond;
+        } else if (millSecond < 100) {
+            millSecond = "0" + millSecond;
+        }
+        if (timeSum < 0) {
+            div.innerHTML = "距离苹果发布会还有00天00小时00分00秒000毫秒";
+            clearInterval(timer);
+            return;
+        }
+        div.innerHTML = "距离苹果发布会还有" + day + "天" + hour + "小时" + minute + "分" + second + "秒" + millSecond + "毫秒";
+    }
+</script>
+</body>
+</html>

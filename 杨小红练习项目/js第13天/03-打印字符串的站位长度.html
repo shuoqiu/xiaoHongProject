@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str = "I love my country!我你爱中国！";
+    alert(getZFWlength(str));
+    alert(str.length);
+
+    function getZFWlength(string) {
+        var count = 0;
+        for (var i = 0; i < string.length; i++) {
+            if (string.charCodeAt(i) < 128 && string.charCodeAt(i) >= 0) {
+                count++;
+            } else {
+                count += 2;
+            }
+        }
+        return count;
+    }
+
+
+</script>
+</body>
+</html>

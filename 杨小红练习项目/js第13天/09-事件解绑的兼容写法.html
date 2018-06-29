@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button>赋诗</button>
+
+
+<script>
+
+    var btn = document.getElementsByTagName("button")[0];
+
+    EventListen = {
+        addEvent: function (ele, fn, str) {
+            if (ele.addEventListener) {
+                ele.addEventListener(str, fn);
+            } else if (ele.attachEvent) {
+                ele.attachEvent("on" + str, fn);
+            } else {
+                ele["on" + str] = fn;
+            }
+        }
+        removeEvent: function (ele, fn, str) {
+            if (ele.removeEventListener) {
+                ele.removeEventListener(str, fn);
+            } else if (ele.detachEvent) {
+                ele.detachEvent("on" + str, fn);
+            } else {
+                ele["on" + str] = null;
+            }
+        }
+    }
+
+
+    EventListen.addEvent(btn, fn, "click");
+
+    EventListen.removeEvent(btn, fn, "click");
+
+    function fn() {
+        alert(1);
+    }
+
+</script>
+</body>
+</html>

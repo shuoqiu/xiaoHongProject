@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        select {
+            width: 180px;
+            height: 240px;
+            font-size: 16px;
+            background-color: #7dff51;
+        }
+    </style>
+
+</head>
+<body>
+<select name="" size="10" id="sel1" multiple>
+    <option value="">香蕉</option>
+    <option value="">苹果</option>
+    <option value="">鸭梨</option>
+    <option value="">葡萄</option>
+</select>
+<button>>>></button>
+<button><<<</button>
+<button>></button>
+<button><</button>
+<select name="" size="10" id="sel2" multiple>
+
+</select>
+<script>
+
+    var sel1 = document.getElementById("sel1");
+    var sel2 = document.getElementById("sel2");
+    var btnArr = document.getElementsByTagName("button");
+
+
+    //        btnArr[0].onclick = function () {
+    //            var arr = sel1.children;
+    //            for(var i=arr.length-1;i>=0;i--){
+    //                sel2.appendChild(arr[arr.length-1-i]);
+    //            }
+    //        }
+    //
+    //        btnArr[1].onclick = function () {
+    //            var arr = sel2.children;
+    //            for(var i=arr.length-1;i>=0;i--){
+    //                sel1.appendChild(arr[arr.length-1-i]);
+    //            }
+    //        }
+    //        btnArr[2].onclick=function(){
+    //            var arr=sel1.children;
+    //            for(var i=arr.length-1;i>=0;i--){
+    //                if(arr[i].selected==true){
+    //                    arr[i].selected=false;
+    //                    sel2.appendChild(arr[i]);
+    //                }
+    //            }
+    //        }
+    //        btnArr[3].onclick=function(){
+    //            var arr=sel2.children;
+    //            for(var i=arr.length-1;i>=0;i--){
+    //                if(arr[i].selected==true){
+    //                    arr[i].selected=false;
+    //                    sel1.appendChild(arr[i]);
+    //                }
+    //            }
+    //        }
+    btnArr[0].onclick = function () {
+        fn1(sel1, sel2);
+    }
+    btnArr[1].onclick = function () {
+        fn1(sel2, sel1);
+    }
+    btnArr[2].onclick = function () {
+        fn2(sel1, sel2);
+    }
+    btnArr[3].onclick = function () {
+        fn2(sel2, sel1);
+    }
+    function fn1(ele1, ele2) {
+        var arr = ele1.children;
+        for (i = arr.length - 1; i >= 0; i--) {
+            ele2.append(arr[arr.length - 1 - i]);
+        }
+    }
+    function fn2(ele1, ele2) {
+        var arr = ele1.children;
+        for (i = arr.length - 1; i >= 0; i--) {
+            if (arr[i].selected == true) {
+                arr[i].selected = false;
+                ele2.append(arr[i]);
+            }
+        }
+    }
+</script>
+</body>
+</html>

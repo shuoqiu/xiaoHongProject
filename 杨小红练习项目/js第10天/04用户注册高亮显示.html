@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrong {
+            border: 2px solid red;
+        }
+
+        .right {
+            border: 2px solid #91B81D;
+        }
+    </style>
+</head>
+<body>
+账号:<input type="text" onblur="fn(this)"><br><br>
+密码:<input type="password" onblur="fn(this)">
+<script>
+    var inp = document.getElementsByTagName("input");
+    function fn(aaa) {
+        if (aaa.value.length <= 6 || aaa.value.length > 12) {
+            aaa.className = "wrong";
+        } else {
+            aaa.className = "right";
+        }
+    }
+
+
+    <!--账号:<input id="inp1" type="text"><br><br>-->
+    <!--密码:<input id="inp2" type="password">-->
+    <!--<script>-->
+    <!--var inp1=document.getElementById("inp1");-->
+    <!--inp1.onblur=function(){-->
+    <!--if(inp1.value.length<=6||inp1.value.length>12){-->
+    <!--inp1.className="wrong";-->
+    <!--}else{-->
+    <!--inp1.className = "right";-->
+    <!--}-->
+    <!--}-->
+    <!--var inp2=document.getElementById("inp2");-->
+    <!--inp2.onblur=function(){-->
+    <!--if(inp2.value.length<=6||inp2.value.length>12){-->
+    <!--inp2.className="wrong";-->
+    <!--}else{-->
+    <!--inp2.className = "right";-->
+    <!--}-->
+    <!--}-->
+</script>
+</body>
+</html>
