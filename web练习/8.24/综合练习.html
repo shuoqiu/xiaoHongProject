@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body,ul,li,p,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,input{
+			margin: 0;
+			padding: 0;
+			font:12px 宋体;
+		}
+		ul li{
+			list-style: none;
+		}
+		ul li a{
+			text-decoration: none;
+		}
+		img{
+			border: 0 none;
+		}
+		input{
+			border: 0 none;
+			outline-style: none;
+		}
+
+		.fl{
+		float: left;
+	    }
+	    .fr{
+		float: right;
+	    }
+		.head{
+			width: 980px;
+			height: 39px;
+			margin:20px auto;
+		}
+		.logo{
+			width: 179px;
+			height: 39px;
+
+		}
+		.search{
+		    width: 195px;
+		    height: 30px;
+		    border:1px solid gray;
+		}
+		.search input[type="text"]{
+            height: 30px;
+            width: 165px;
+            vertical-align: top;
+		}
+        .search input[type="button"]{
+            width: 30px;
+            height: 30px;
+            background: url("images/search2.jpg");
+        }
+        .nav{
+        	height: 55px;
+        	background: url("images/nav_bg.png");
+        	border-top:1px solid gray;
+
+
+        }
+        .nav-con{
+        	width: 980px;
+        	height: 55px;
+        	margin: 0 auto;
+        }
+        .nav-con ul li{
+        	float:left;
+        }
+        .nav-con ul li a{
+        	display: inline-block;
+        	height: 55px;
+        	line-height: 55px;
+        	background: url("images/nav_bg-line.png") no-repeat right;
+        	padding:0 40px;
+        	font:700 12px/55px 宋体;
+        	color:gray;
+        	text-align: cnter;
+        }
+        .nav-con li a:hover{
+		color:green;
+	    }
+	    .banner{
+	    	width: 980px;
+	    	height: 597px;
+	    	margin: 0 auto;
+	    }
+	    .mes{
+	    	height: 32px;
+	    	background:#FBFBFB;
+	    	border-top: 1px solid #EFEFEF;
+		    border-bottom: 1px solid #EFEFEF;
+		    margin-bottom: 10px;
+
+	    }
+	    .mes-con{
+	    	width: 980px;
+	    	height: 32px;
+	    	margin: 0 auto;
+	    }
+	    .mes-con-l{
+	    	height: 32px;
+	    	line-height: 32px;
+	    }
+	    .mes-con-r img{
+            vertical-align: middle;
+            height: 16px;
+            margin-top: 8px;
+          
+	    }
+	    .news{
+	    	width: 980px;
+	    	height: 224px;
+	    	margin: 15px auto;
+	    }
+	    .news-l,.news-c,.news-r{
+		    border:1px solid #E4E4E4;
+		    height: 224px;
+	    }
+	    .news-l{
+		    width: 310px;
+		    position: relative;
+
+		
+	    }
+	   .news-c{
+		    width: 373px;
+		    margin-left:12px;
+	    }
+	   .news-r{
+		    width: 268px;
+		    
+	    }
+	   .pro{
+		    margin: 14px 0 0 6px;
+		    color:green;
+	    }
+	   .pro-pic{
+		    position: absolute;
+		    left:55px;
+		    top:45px;
+		}
+	   .sj-l{
+	        position: absolute;
+	        left:23px;
+	        bottom:90px;
+	    }
+	   .sj-r{
+	        position: absolute;
+	        right:23px;
+	        bottom:90px;
+	    }
+	   .news-c ul{
+
+            margin:10px 17px 0;
+	    }
+	    .news-c ul li{
+	    	height: 27px;
+	    	line-height: 27px;
+	    	border-bottom:1px dashed gray;
+	    }
+	    .news-c ul li.one{
+	    	font-weight: :700 ;
+	    	color:red;
+	    }
+	    .news-r ul{
+	    	margin: 10px 0 30px 28px;
+	    }
+	    .news-r ul li{
+            height:12px;
+		    border-left: 3px solid #7AB800;
+		    margin-top: 5px;
+		    line-height: 12px;
+		    padding-left: 5px;
+		  
+	    }
+	    .news-r p{
+	    	padding-left: 15px;
+	    }
+	    .foot{
+		    height: 280px;
+		    background: #2D2D2D;
+		    border-bottom: 1px dashed red;
+		
+	}
+	    .foot-con{
+		    width: 980px;
+		    margin: 0 auto;
+	}
+	    .foot-con dl{
+		    float: left;
+		    margin-top:20px;
+		    margin-right:40px;
+	}
+	    .foot-con dl dt{
+		    color:white;
+	}
+	    .foot-con dl dd{
+		    color:white;
+		    margin-top: 20px;
+	}
+	    .l{
+		    background: green;
+		    height: 54px;
+		    text-align: center;
+		    padding-top:30px;
+	}
+
+
+	</style>
+</head>
+<body>
+<div class="head">
+	<div class="logo fl"><img src="images/logo.jpg" alt=""></div>
+	<div class="search fr" ><input type="text" value=" 请输入"><input type="button"></div>
+</div>
+<div class="nav">
+	<div class="nav-con">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">智能手机</a></li>
+			<li><a href="#">平板电脑</a></li>
+			<li><a href="#">配件</a></li>
+			<li><a href="#">服务支持</a></li>
+			<li><a href="#">关于尚合</a></li>
+		</ul>
+	</div>
+</div>
+<div class="banner"><img src="images/banner.jpg" alt=""></div>
+<div class="mes">
+	<div class="mes-con">
+		<div class="mes-con-l fl">最新公告：尚合Aone智能手机入网证已获取工信部门审批下发。尚合官网</div>
+		<div class="mes-con-r fr">
+			<img src="images/zone.png" alt="">
+			<img src="images/weibo.png" alt="">
+			<img src="images/xinlang.png" alt="">
+			<img src="images/renren.png" alt="">
+		</div>
+		
+	</div>
+</div>
+<div class="news">
+	<div class="news-l fl">
+		<div class="pro">
+				<img src="images/o.jpg" alt="">
+				新品发布
+		</div>
+		<div class="pro-pic"><img src="images/home_hot_01.png" alt=""></div>
+		<div class="sj-l"><img src="images/left.png" alt=""></div>
+		<div class="sj-r"><img src="images/right.png" alt=""></div>
+	</div>
+
+    <div class="news-c fl">
+    	<div class="pro">
+				<img src="images/o.jpg" alt="">
+				 新闻中心
+		</div>
+		<ul>
+			<li class="one">致歉公告</li>
+			<li>首批尚合Aonet已全部售馨!</li>
+			<li>【媒体报导】国产高性价比 尚合Aonet四核手机评测</li>
+			<li>我司产品已经通过了国家强制性产品3C认证</li>
+			<li>尚合Aone智能手机入网证已经获工信部门审批下发.</li>
+			<li>我司通过ISO9001:2008国际质量管理体系认证</li>
+		</ul>
+    </div>
+
+    <div class="news-r fr">
+    	<div class="pro">
+				<img src="images/o.jpg" alt="">
+				 技术与支持
+		</div>
+		<ul>
+			<li>售后服务</li>
+			<li>投诉与建议</li>
+			<li>联保网点</li>
+			<li>常见问题FAQ</li>
+		</ul>
+		<p>深圳市汇聚众合科技发展有限公司<br>服务热线：400-633-7922</p>
+    </div>
+
+</div>
+
+<div class="foot">
+        <div class="foot-con">
+			<dl>
+				<dt>尚合首页</dt>
+				<dd>返回首页</dd>
+			</dl>
+			<dl>
+				<dt>尚合首页</dt>
+				<dd>返回首页</dd>
+			</dl>
+			<dl>
+				<dt>尚合首页</dt>
+				<dd>返回首页</dd>
+			</dl>
+			<dl>
+				<dt>尚合首页</dt>
+				<dd>返回首页</dd>
+			</dl>
+        </div>
+</div>
+<div class="l">
+深圳市会居中和优先公司深圳市会居中和优先公司深圳市会居中和优先公司深圳市<br>	
+会居中和优先公司深圳市会居中和优先公司深圳市会居中和优先公司</div>
+
+</body>
+</html>
