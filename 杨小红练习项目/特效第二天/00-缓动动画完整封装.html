@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<button>运动到200</button>
+<button>运动到400</button>
+<div></div>
+
+<script>
+    var 　
+    btn = document.getElementsByTagName("button");
+    var 　
+    div = document.getElementsByTagName("div")[0];
+    btn[0].onclick = function () {
+        animate(div, 200);
+    }
+    btn[1].onclick = function () {
+        animate(div, 400);
+    }
+    function animate(ele, target) {
+        clearInterval(ele.timer);
+        ele.timer = setInterval(function () {
+            var step = (target - ele.offsetLeft) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            ele.style.left = ele.offsetLeft + step + "px";
+            console.log(1);
+            if (Math.abs(target - ele.offsetLeft) <= Math.abs(step)) {
+                ele.style.left = target + "px";
+                clearInterval(ele.timer);
+            }
+        }, 30);
+    }
+
+
+</script>
+
+</body>
+</html>

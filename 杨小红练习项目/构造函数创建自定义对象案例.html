@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var stu1 = new Student("王五");
+    var stu2 = new Student("赵丽");
+    console.log(stu1);
+    stu1.sayHi();
+    console.log(stu2);
+    stu2.sayHi();
+    function Student(name) {
+        this.name = name;
+        this.sayHi = function () {
+            console.log(this.name + "说：大家好！")
+        }
+    }
+</script>
+</body>
+</html>

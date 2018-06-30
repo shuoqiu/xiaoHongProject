@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/*<!--main部分start-->*/
+.main-slider {
+    float: left;
+    margin: 12px 0 0 220px;
+    width: 730px;
+    height: 454px;
+    position: relative;
+}
+
+.main-slider ul {
+    position: absolute;
+    left: 50%;
+    margin-left: -66px;
+    bottom: 10px;
+}
+
+.main-slider li {
+    float: left;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    background-color: #3E3E3E;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    margin: 0 2px;
+    coursor: pointer;
+}
+
+.main-slider .current {
+    background-color: yellow;
+    color: #000;
+}
+
+.arrow a {
+    position: absolute;
+    top: 50%;
+    width: 28px;
+    height: 62px;
+    font: 400 22px/62px "simson";
+    color: #fff;
+    /*background-color: rgb(0,0,0);*/
+    /*opacity:0.4;*/
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: -31px;
+    /*border-radius:30px;*/
+}
+
+.arrow a:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.arrow-left {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.arrow-right {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.main-news {
+    float: right;
+    height: 466px;
+    width: 250px;
+}
+
+.main-news-top {
+    height: 372px;
+    width: 248px;
+    border: 1px solid #E4E4E4;
+    margin: 12px 0 5px 0;
+    overflow: hidden;
+}
+
+.main-news-top-fast {
+    height: 163px;
+    border-bottom: 1px dotted #e4e4e4;
+}
+
+.main-news-top-fast-title {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+    border-bottom: 1px dashed #e8e8e7;
+}
+
+.main-news-top-fast-title h2 {
+    float: left;
+    font: 400 16px/32px "microsoft yahei";
+}
+
+.main-news-top-fast-title a {
+    float: right;
+    font-family: "consolas";
+}
+
+.main-news-top-fast-content {
+    padding: 5px 0 0 15px;
+
+}
+
+.main-news-top-fast-content li {
+    /*height: 24px;*/
+    line-height: 24px;
+
+}
+
+.main-news-top-fast-content span {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.main-news-top-money ul {
+    width: 260px;
+}
+
+.main-news-top-money li {
+    width: 62px;
+    height: 70px;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #e8e8e7;
+    float: left;
+    border-top: 0;
+}
+
+.main-news-top-money a {
+    display: block;
+    width: 62px;
+    height: 30px;
+    padding-top: 40px;
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+}
+
+.main-news-top-money i {
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    background: url("../images/fly.png") no-repeat;
+}
+
+/*<!--main部分end-->*/
+
+/*<!--today开始-->*/
+.today {
+    padding: 10px 0 20px;
+}
+
+.today-left {
+    float: left;
+}
+
+.today-left a {
+    width: 210px;
+    height: 151px;
+    display: block;
+    background: url("../images/today.png") left bottom;
+}
+
+.today-right {
+    float: right;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+
+.today-right ul {
+    width: 410%;
+}
+
+.today-right li {
+    float: left;
+    margin-right: 1px;
+}
+
+/*<!--today结束-->*/

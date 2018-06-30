@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 1000px;
+            margin-top: 10px;
+
+        }
+
+        #Q-nav1 {
+            overflow: hidden;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script src="animate.js"></script>
+    <script>
+        window.onload = function () {
+            var topDiv = document.getElementById("top");
+            var height = topDiv.offsetHeight;
+            var middle = document.getElementById("Q-nav1");
+            var main = document.getElementById("main");
+            window.onscroll = function () {
+                if (scroll().top > height) {
+                    middle.className = " fixed";
+                    main.style.paddingTop = middle.offsetHeight + "px";
+                } else {
+                    middle.className = " ";
+                    main.style.paddingTop = 0;
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div class="top" id="top">
+    <img src="images/top.png" alt=""/>
+</div>
+<div id="Q-nav1">
+    <img src="images/nav.png" alt=""/>
+</div>
+<div class="main" id="main">
+    <img src="images/main.png" alt=""/>
+</div>
+</body>
+</html>

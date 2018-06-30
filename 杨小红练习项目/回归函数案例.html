@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log(fn(10, 5, test1));
+    console.log(fn(10, 5, test2));
+    console.log(fn(10, 5, test3));
+    console.log(fn(10, 5, test4));
+
+    function fn(num1, num2, demo) {
+        return demo(num1, num2);
+    }
+    function test1(a, b) {
+        return a + b;
+    }
+    function test2(a, b) {
+        return a - b;
+    }
+    function test3(a, b) {
+        return a * b;
+    }
+    function test4(a, b) {
+        return a / b;
+    }
+</script>
+</body>
+</html>

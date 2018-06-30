@@ -1,0 +1,44 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            height: 5000px;
+            width: 5000px;
+        }
+    </style>
+</head>
+<body>
+
+
+<script>
+    window.onscroll = function () {
+        console.log(scroll().top);
+        console.log(scroll().left);
+    }
+
+
+    function scroll() {
+        if (window.pageYOffset !== undefined) {
+            return {
+                "top": window.pageYOffset,
+                "left": window.pageXOffset
+            };
+        } else if (document.compatMode === "CSS1Compat") {
+            return {
+                "top": document.documentElement.scrollTop,
+                "left": document.documentElement.scrollLeft
+            };
+        } else {
+            return {
+                "top": document.body.scrollTop,
+                "left": document.body.scrollLeft
+            };
+        }
+    }
+
+
+</script>
+</body>
+</html>
